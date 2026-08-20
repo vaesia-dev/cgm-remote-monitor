@@ -1,5 +1,25 @@
-
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+
+/* Vaesia Theme — midnight / blue-hour palette */
+:root {
+  --vaesia-bg: #080A12;
+  --vaesia-surface: #111522;
+  --vaesia-surface-raised: #171C2B;
+  --vaesia-border: #546282;
+  --vaesia-border-soft: #3B4560;
+  --vaesia-text: #E8ECFA;
+  --vaesia-text-secondary: #A9B1C9;
+  --vaesia-text-muted: #68718A;
+  --vaesia-accent: #8AAEFF;
+  --vaesia-accent-deep: #7189C7;
+  --vaesia-lavender: #B89CFF;
+  --vaesia-rose: #FF91B5;
+  --vaesia-warning: #FFB84D;
+  --vaesia-danger: #FF6574;
+  --vaesia-success: #7FD7B5;
+  --vaesia-white: #F4F6FF;
+}
+
 
 @font-face {
   font-family: 'nsicons';
@@ -94,8 +114,8 @@ html, body {
 
 body {
   font-family: 'Ubuntu', sans-serif;
-  background: #000;
-  color: #bdbdbd;
+  background: var(--vaesia-bg);
+  color: var(--vaesia-text);
 }
 
 .container {
@@ -115,26 +135,26 @@ button {
 }
 
 .ui-button {
-  background-color: grey;
-  border: 1px solid white;
+  background-color: var(--vaesia-surface-raised);
+  border: 1px solid var(--vaesia-border);
   padding: 2px;
 }
 
 a, a:visited, a:link {
-  color: #2196f3;
+  color: var(--vaesia-accent);
   text-decoration: none;
 }
 
 #container.announcing .customTitle {
-  color: orange;
+  color: var(--vaesia-warning);
 }
 
 #container.alarming.urgent .customTitle {
-  color: red;
+  color: var(--vaesia-danger);
 }
 
 #container.alarming.warning .customTitle {
-  color: yellow;
+  color: var(--vaesia-warning);
 }
 
 .primary {
@@ -152,15 +172,15 @@ a, a:visited, a:link {
 }
 
 .urgent .bgButton {
-  color: red;
+  color: var(--vaesia-danger);
 }
 
 .warning .bgButton {
-  color: yellow;
+  color: var(--vaesia-warning);
 }
 
 .inrange .bgButton {
-  color: #4cff00;
+  color: var(--vaesia-success);
 }
 
 .bgStatus .bgSpan {
@@ -211,8 +231,8 @@ a, a:visited, a:link {
 .pill {
   white-space: nowrap;
   border-radius: 5px;
-  border: 2px solid #808080;
-  background: #808080;
+  border: 2px solid var(--vaesia-border);
+  background: var(--vaesia-border);
   display: inline-block;
   margin-bottom: 4px;
   padding: 2px 0;
@@ -226,34 +246,34 @@ a, a:visited, a:link {
 .pill em {
   font-style: normal;
   font-weight: bold;
-  background: #000;
+  background: var(--vaesia-bg);
   border-radius: 3px;
 }
 
 .pill label {
-  color: #000;
+  color: var(--vaesia-bg);
 }
 
 .container .pill.warn em {
-  color: yellow;
+  color: var(--vaesia-warning);
 }
 
 .container .pill.urgent em {
-  color: red;
+  color: var(--vaesia-danger);
 }
 
 .alarming-timeago .timeago.pill.warn {
-  border-color: yellow;
+  border-color: var(--vaesia-warning);
 }
 .alarming-timeago .timeago.pill.warn label {
-  background: yellow;
+  background: var(--vaesia-warning);
 }
 
 .alarming-timeago .timeago.pill.urgent {
-  border-color: red;
+  border-color: var(--vaesia-danger);
 }
 .alarming-timeago .timeago.pill.urgent label {
-  background: red;
+  background: var(--vaesia-danger);
 }
 
 .bgStatus.current .currentBG {
@@ -265,7 +285,7 @@ a, a:visited, a:link {
 }
 
 .status {
-  color: #808080;
+  color: var(--vaesia-text-muted);
   font-size: 100px;
   white-space: normal;
 }
@@ -284,13 +304,13 @@ a, a:visited, a:link {
 }
 
 .statusPills .pill {
-  background: #808080;
-  border-color: #808080;
+  background: var(--vaesia-border);
+  border-color: var(--vaesia-text-muted);
   margin-right: 5px;
 }
 
 .statusPills .pill em {
-  color: #bdbdbd;
+  color: var(--vaesia-text-secondary);
 }
 
 #chartContainer {
@@ -299,7 +319,7 @@ a, a:visited, a:link {
   bottom: 0;
   height: auto;
   font-size: 20px;
-  background: #111;
+  background: var(--vaesia-surface);
   display: block;
   position: absolute;
   margin: 2px;
@@ -316,7 +336,7 @@ a, a:visited, a:link {
 #silenceBtn, #viewMenu {
   z-index: 99;
   border-radius: 5px;
-  border: 2px solid #bdbdbd;
+  border: 2px solid var(--vaesia-text-secondary);
 }
 
 #viewMenu {
@@ -336,7 +356,7 @@ a, a:visited, a:link {
 
 .bgButton {
   margin: 10px;
-  border: 2px solid #000;
+  border: 2px solid var(--vaesia-bg);
   border-radius: 5px;
   display: inline-block;
   width: 360px;
@@ -349,13 +369,13 @@ a, a:visited, a:link {
 .pill.rawbg {
   display: inline-block;
   border-radius: 2px;
-  border: 1px solid #808080;
+  border: 1px solid var(--vaesia-border);
   padding: 0;
 }
 
 .pill.rawbg em {
-  color: white;
-  background-color: black;
+  color: var(--vaesia-white);
+  background-color: var(--vaesia-bg);
   display: block;
   font-size: 20px;
   border-radius: 0;
@@ -369,21 +389,21 @@ a, a:visited, a:link {
 }
 
 .alarming .bgButton {
-  border-color: #bdbdbd;
-  color: #000;
-  box-shadow: 2px 2px 0 #ddd;
+  border-color: var(--vaesia-text-secondary);
+  color: var(--vaesia-bg);
+  box-shadow: 2px 2px 0 var(--vaesia-accent-deep);
 }
 
 .alarming.urgent .bgButton {
-  background-color: red;
+  background-color: var(--vaesia-danger);
 }
 
 .alarming.warning .bgButton {
-  background-color: yellow;
+  background-color: var(--vaesia-warning);
 }
 
 .alarming .bgButton:active {
-  border: 2px solid #bdbdbd;
+  border: 2px solid var(--vaesia-text-secondary);
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -392,20 +412,20 @@ a, a:visited, a:link {
 
 .button {
   text-align: center;
-  background: #ababab;
+  background: var(--vaesia-accent);
   margin: 10px auto;
 }
 
 .tooltip {
   top: 0;
   left: 0;
-  color: #444;
+  color: var(--vaesia-bg);
   position: absolute;
   text-align: left;
   padding: 4px;
   font-size: 14px;
   line-height: 15px;
-  background: white;
+  background: var(--vaesia-white);
   border: 0;
   border-radius: 8px;
   float: right;
@@ -425,7 +445,7 @@ a, a:visited, a:link {
   list-style: none;
   margin: 4px;
   padding: 0;
-  color: #808080;
+  color: var(--vaesia-text-muted);
   width: 40%;
   text-align: center;
 }
@@ -435,14 +455,14 @@ a, a:visited, a:link {
   font-size: 18px;
   white-space: nowrap;
   border-radius: 5px;
-  border: 2px solid #000;
+  border: 2px solid var(--vaesia-bg);
   cursor: pointer;
 }
 
 .focus-range .selected {
-  border-color: #808080;
-  color: #000;
-  background: #808080;
+  border-color: var(--vaesia-text-muted);
+  color: var(--vaesia-bg);
+  background: var(--vaesia-border);
 }
 
 .pill.hidden {
@@ -464,11 +484,11 @@ a, a:visited, a:link {
 
 .authentication-status {
   padding: 10px;
-  border-top: 1px solid #bdbdbd;
+  border-top: 1px solid var(--vaesia-text-secondary);
 }
 
 .authentication-status a {
-  color: #2196f3;
+  color: var(--vaesia-accent);
   text-decoration: underline;
 }
 
